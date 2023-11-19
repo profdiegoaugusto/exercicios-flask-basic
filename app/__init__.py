@@ -1,5 +1,6 @@
 from flask import Flask
 
+from app.controllers.paciente_controller import PacienteController
 
 
 def create_app():
@@ -11,11 +12,8 @@ def create_app():
     from app.controllers.home_controller import HomeController
 
     app.register_blueprint(HomeController.home)
+    app.register_blueprint(PacienteController.paciente)
 
-    #@app.route("/")
-    #def hello():
-    #    return "Hello, World!"
-
-    app.add_url_rule("/", endpoint="index")
+    app.add_url_rule("/", endpoint="home.index")
 
     return app

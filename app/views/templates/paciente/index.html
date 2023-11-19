@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Paciente{% endblock %}
+
+
+
+
+{% block content %}
+
+<h2>Paciente</h2>
+
+<div class="divider"></div>
+
+
+<div class="row">
+
+    <div class="col s12 m12 l6">
+        <section class="section">
+
+            <h3>Informações</h3>
+
+            <form action="calcular" method="post">
+
+                <div class="row">
+                    <div class="input-field col s6">
+
+                        <input type="text" name="nome" id="nome" class="">
+                        <label for="nome">Nome</label>
+
+                    </div>
+
+                    <div class="input-field col s12">
+                        <select>
+                            <option value="" disabled selected>Escolha uma opção</option>
+                            <option value="F">Feminino</option>
+                            <option value="M">Masculino</option>
+                        </select>
+                        <label>Sexo</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+      
+                        <input type="text" name="altura" id="altura" class="">
+                        <label for="altura">Altura (Metros)</label>
+                        
+                    </div>
+
+                    <div class="input-field col s6">
+      
+                        <input type="text" name="peso" id="peso" class="">
+                        <label for="peso">Peso (Kg)</label>
+                        
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+    </div>
+    
+    <div class="col s12 m12 l6">
+
+        <h3>Resultado</h3>
+
+    </div>
+</div>
+{% endblock %}

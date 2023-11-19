@@ -17,15 +17,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock %} Gabarito - Exercícios Flask</title>
+    
   </head>
   <body>
     
     <header>
       <nav>
         <div class="nav-wrapper green darken-3">
-          <a href="{{ url_for('index') }}" class="brand-logo"> Exercícios Flask</a>
+          <a href="{{ url_for('home.index') }}" class="brand-logo"> Exercícios Flask</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">IMC</a></li>
+            <li><a href="{{ url_for('paciente.index') }}">IMC</a></li>
             <li><a href="#">Repositórios</a></li>
             <li><a href="#">CEP</a></li>
           </ul>
