@@ -1,11 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Exercícios Flask</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <h2>Home Page</h2>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Gabaritos{% endblock %}
+
+{% block content %}
+
+<h2>Gabaritos</h2>
+
+<div class="row">
+
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-content">
+              <span class="card-title">IMC e Peso Ideal</span>
+              <p>Aplicação que calcula o IMC e mostra o peso ideal do paciente.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Abrir</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-content">
+              <span class="card-title">Repositório Github</span>
+              <p>Busca as informações dos repositórios de um usuário no github usando a API REST</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Abrir</a>
+            </div>
+        </div>       
+    </div>
+
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Pesquisa CEP</span>
+                <p>Pesquisa um endereço qualquer por CEP ou nome do logradouro</p>
+            </div>
+            <div class="card-action">
+                <a href="#">Abrir</a>
+            </div>
+        </div>       
+    </div>
+</div>
+{% endblock %}
